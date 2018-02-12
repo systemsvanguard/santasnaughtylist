@@ -1,0 +1,5 @@
+/* Styling for Santa's Naughty List app */
+h1, h2, h3 {
+	font-family: 'Poppins', sans-serif;
+	color: #4B0082;  /* indigo */
+}

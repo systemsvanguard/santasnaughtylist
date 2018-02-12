@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Naughty List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="santasnaughtylist/images/img/appicon.ico" />   
+  <link rel="stylesheet" href="http://ryanhunter.org/portfolio/libs/sweetalert2/sweetalert2.min.css">
+  <link rel="stylesheet" href="http://ryanhunter.org/portfolio/libs/w3/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="santasnaughtylist/santasnaughtylist.css" rel="stylesheet" type="text/css" />  
+  <script src="http://ryanhunter.org/portfolio/libs/angularjs/1.6/angular.min.js"></script>
+  <script src="http://ryanhunter.org/portfolio/libs/sweetalert2/sweetalert2.min.js"></script>
+  <script src="santasnaughtylist/santasnaughtylist.js"></script>
+</head>
+<body>
+<div class="w3-container"> 
+	<!--/ Santa's Naughty List -->
+	<div ng-app="naughtyList" ng-cloak ng-controller="naughtyCtrl" class="w3-card-2 w3-margin" style="max-width:500px;">
+	  <header class="w3-container w3-pale-blue w3-padding-16">
+		<h2>Santa's Naughty List</h2>
+	  </header>
+	  <ul class="w3-ul">
+		<li ng-repeat="x in products" class="w3-padding-16 w3-hover-indigo">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+	  </ul>
+	  <div class="w3-container w3-pale-blue w3-padding-16">
+		<div class="w3-row w3-margin-top">
+		  <div class="w3-col s10">
+			<input placeholder="Add pals that deserve no presents!" ng-model="addMe" class="w3-input w3-border w3-padding">
+		  </div>
+		  <div class="w3-col s2">
+			<button ng-click="addItem()" class="w3-button w3-round-large w3-indigo w3-hover-purple w3-padding" >Add</button>
+		  </div>
+		</div>
+		<p class="w3-text-red">{{errortext}}</p>
+	  </div>
+	  <img src="santasnaughtylist/images/coal_in_stocking2.jpg" alt="Coal in Christmas Stocking">
+	  <div class="w3-panel w3-card">
+	  	<h2>Code Portfolio</h2>
+		<p>A simple but fun Angular.js and W3.js powered <strong>List App</strong> application by a coder that watches far too many political late night comedy shows.  Coded by <a href="http://www.ryanhunter.org/">Ryan Hunter</a>.  </p>
+	  </div>
+	</div>	<!--/ naughtyList -->
+</div><!--/ container -->
+</body>
+</html>
